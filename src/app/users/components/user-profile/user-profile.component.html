@@ -1,1 +1,68 @@
-<p>user-profile works!</p>
+<div class="user-profile">
+  <mat-card appearance="outlined">
+<!-- 
+      {
+    id: 3,
+    name: 'Clementine Bauch',
+    username: 'Samantha',
+    email: 'Nathan@yesenia.net',
+    address: {
+      street: 'Douglas Extension',
+      suite: 'Suite 847',
+      city: 'McKenziehaven',
+      zipcode: '59590-4157',
+      geo: { lat: '-68.6102', lng: '-47.0653' }
+    },
+    phone: '1-463-123-4447',
+    website: 'ramiro.info',
+    company: {
+      name: 'Romaguera-Jacobson',
+      catchPhrase: 'Face to face bifurcated interface',
+      bs: 'e-enable strategic applications'
+    }
+  }
+-->
+
+    
+    <mat-list *ngIf="data">
+      <mat-list-item>
+        <b>Name: </b> {{data.name}}
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <b>Username: </b> {{data.username}}
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <b>Email: </b> {{data.email}}
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <b>Street: </b> {{data.address.street}}
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <b>City: </b> {{data.address.city}} 
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <b>Zipcode: </b> {{data.address.zipcode}}
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <b>phone: </b> {{data.phone}}
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <b>website: </b> {{data.website}}
+      </mat-list-item>
+
+
+    </mat-list>
+
+    <mat-card-actions>
+      <button mat-button (click)="getData()">Refresh</button>
+      <button mat-button (click)="getData()">Show Profile</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
